@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                 Welcome to Our Website Launching Very Soon
                             </span>
                         </a>
+                        <!-- Adding a new dynamic link here -->
+                        <!-- <a href="https://yourlink.com" style="color: blue; font-size: 1em; font-weight: normal;">
+                            Visit Our Site for More Details
+                        </a> -->
                     </li>
                 </ul>
             </marquee>

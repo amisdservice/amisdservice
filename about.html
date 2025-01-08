@@ -469,6 +469,25 @@
                                     <li class="tweet"> 
 
                                         Dedicated to empowering lives and fostering hope through compassion, action, and community service.
+                                        <script>
+                                            fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS&tweet.fields=author_id,created_at&expansions=author_id&user.fields=username', {
+                                                headers: {
+                                                    'Authorization': 'Bearer YOUR_BEARER_TOKEN'
+                                                }
+                                            })
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                const tweets = data.data;
+                                                const users = data.includes.users;
+                                                let tweetsHtml = '';
+                                                tweets.forEach(tweet => {
+                                                    const user = users.find(user => user.id === tweet.author_id);
+                                                    tweetsHtml += `<li class="tweet"><strong>${user.username}:</strong> ${tweet.text}</li>`;
+                                                });
+                                                document.querySelector('.tweets').innerHTML = tweetsHtml;
+                                            })
+                                            .catch(error => console.error('Error fetching tweets:', error));
+                                        </script>
 
                                     </li>
 

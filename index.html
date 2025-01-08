@@ -119,24 +119,19 @@
       </div>
   </div>
   
-  <!-- Move the marquee outside the page-heading -->
-  <div class="latest-updates">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="latest-updates-content">
-            <marquee behavior="scroll" direction="left">
-              <ul class="list-unstyled">
-                <li><a class="navbar-brand" href="index.html"><span style="font-family: 'Adelon Bold'; font-weight: bold; color: red; font-size: 1.1em;">Welcome to Our Website Launching Very Soon</span></a></li>
-              </ul>
-            </marquee>
-          </div>
+ <!-- Add this inside your <head> tag or just before closing </body> tag -->
+<script src="assets/js/scrolling.js"></script>
+<div class="latest-updates">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="latest-updates-content">
+          <!-- Marquee will be injected here -->
         </div>
       </div>
     </div>
   </div>
-
-
+</div>
 
 
 
@@ -316,7 +311,7 @@
       
     </div> <!-- /.about-us -->
 
-    <div class="section-home home-reasons">
+<div class="section-home home-reasons">
 
         <div class="container">
 
@@ -444,120 +439,35 @@
     
 
 
-    <footer class="main-footer">
+  <footer class="main-footer">
 
-        <div class="footer-top">
-            
-        </div>
+  <div class="footer-top">
+      <!-- Add any content for footer-top here -->
+  </div>
 
+  <div class="footer-main">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="footer-col">
+                      <h4 class="footer-title">About us</h4>  
+                      <div class="footer-content">
+                          <p><strong>Amisd</strong> Dedicated to empowering lives and fostering hope through compassion, action, and community service.</p>
+                          <p><strong>Amisd</strong> Dedicated to empowering lives and fostering hope through compassion, action, and community service.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 
-        <div class="footer-main">
-            <div class="container">
-                
-                <div class="row">
-                    <div class="col-md-4">
+  <div class="footer-bottom">
+      <div class="container text-right">
+          <p>2025 All Rights Reserved By <a href="http://www.ouarmedia.com">AMISD</a></p>
+      </div>
+  </div>
 
-                        <div class="footer-col">
-
-                             <h4 class="footer-title">About us</h4>  
-
-                            <div class="footer-content">
-
-                                <p><strong>Amisd</strong> Dedicated to empowering lives and fostering hope through compassion, action, and community service.</p>
-
-                                <p><strong>Amisd</strong> Dedicated to empowering lives and fostering hope through compassion, action, and community service.</p>
-
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <<h4 class="footer-title">LAST TWEETS <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-                                <ul class="tweets list-unstyled">
-                                    <li class="tweet"> 
-    
-                                        Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-                                        <script>
-                                            fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS&tweet.fields=author_id,created_at&expansions=author_id&user.fields=username', {
-                                                headers: {
-                                                    'Authorization': 'Bearer YOUR_BEARER_TOKEN'
-                                                }
-                                            })
-                                            .then(response => response.json())
-                                            .then(data => {
-                                                const tweets = data.data;
-                                                const users = data.includes.users;
-                                                let tweetsHtml = '';
-                                                tweets.forEach(tweet => {
-                                                    const user = users.find(user => user.id === tweet.author_id);
-                                                    tweetsHtml += `<li class="tweet"><strong>${user.username}:</strong> ${tweet.text}</li>`;
-                                                });
-                                                document.querySelector('.tweets').innerHTML = tweetsHtml;
-                                            })
-                                            .catch(error => console.error('Error fetching tweets:', error));
-                                        </script>
-    
-                                    </li>
-    
-                                    <li class="tweet"> 
-                                        Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-    
-                                      </li>
-    
-                                      <li class="tweet"> 
-    
-                                        Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-    
-                                      </li>
-
-                                </ul>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            
-                                </div>
-
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-                    <div class="clearfix"></div>
-
-
-
-                </div>
-                
-                
-            </div>
-
-            
-        </div>
-
-        <div class="footer-bottom">
-
-            <div class="container text-right">
-                2025 All Rights Reserved By <a href="http://www.ouarmedia.com">AMISD</a>
-            </div>
-        </div>
-        
-    </footer> <!-- main-footer -->
+</footer> <!-- main-footer -->
 
 
     <!--  Scripts
@@ -597,3 +507,26 @@
   document.querySelector('.fa-instagram').parentElement.href = "https://www.instagram.com/amisdservices/";
   document.querySelector('.fa-youtube').parentElement.href = "https://www.youtube.com/AmisdService";
 </script></script>
+<script>
+  $(document).ready(function() {
+    // Initialize Owl Carousel for Our Sponsors section
+    $('.list-sponsors').owlCarousel({
+      items: 5,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true
+    });
+
+    // Initialize Owl Carousel for Invaluable Contributors section
+    $('.list-supportors').owlCarousel({
+      items: 5,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true
+    });
+  });
+</script>

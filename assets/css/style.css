@@ -123,7 +123,8 @@ a:hover, a:focus, a:active {
 /* Home Slider 
 ================================= */
 .carousel-home img {
-  width: 100%;
+  width: 1260px;  
+  height: auto; 
 }
 .carousel-home .carousel-control {
   background: #1f76bd;

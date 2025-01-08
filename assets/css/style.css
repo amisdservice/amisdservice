@@ -124,8 +124,8 @@ a:hover, a:focus, a:active {
 ================================= */
 
 .carousel-home {
-  width: 90%;     /* Ensure the container is full width */
-  height: 30%;    /* Ensure the height adjusts based on the content */
+  width: 35cm;     /* Ensure the container is full width */
+  /*height: auto;    /* Ensure the height adjusts based on the content */
 }
 .carousel-home img {
   width: 1260px;  

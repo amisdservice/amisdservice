@@ -125,81 +125,17 @@
 		</div>
 
 	</div>
-    <div class="main-container">
-        <div class="container gallery">
-            <!-- Gallery 1 -->
-            <div class="category">
-                <h2 onclick="toggleGallery('amisdGallery1')">Gallery 1</h2>
-                <div class="gallery" id="amisdGallery1">
-                    <div class="row">
-                        <a href="assets/images/gallery/amisd1.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd1.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 1</span>
-                            </span>
-                        </a>
-                        <a href="assets/images/gallery/amisd2.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd2.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 2</span>
-                            </span>
-                        </a>
-                        <a href="assets/images/gallery/amisd3.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd3.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 3</span>
-                            </span>
-                        </a>
-                        <a href="assets/images/gallery/amisd4.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd4.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 4</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
     
-            <!-- Gallery 2 -->
-            <div class="category">
-                <h2 onclick="toggleGallery('amisdGallery2')">Gallery 2</h2>
-                <div class="gallery" id="amisdGallery2">
-                    <div class="row">
-                        <a href="assets/images/gallery/amisd5.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd5.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 5</span>
-                            </span>
-                        </a>
-                        <a href="assets/images/gallery/amisd6.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd6.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 6</span>
-                            </span>
-                        </a>
-                        <a href="assets/images/gallery/amisd7.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd7.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 7</span>
-                            </span>
-                        </a>
-                        <a href="assets/images/gallery/amisd8.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-                            <img src="assets/images/gallery/thumb/amisd8.jpg" alt="">
-                            <span class="on-hover">
-                                <span class="hover-caption">Image Caption 8</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Repeat structure for galleries 3 through 20 -->
+            <!-- Repeat structure for galleries 1 through 20 -->
             <!-- Template -->
+             <!-- <h2 onclick="toggleGallery('amisdGallery${i}')">Gallery ${i}</h2> -->
             <script>
-                for (let i = 3; i <= 20; i++) {
+                for (let i = 1; i <= 20; i++) {
                     document.write(`
                         <div class="category">
-                            <h2 onclick="toggleGallery('amisdGallery${i}')">Gallery ${i}</h2>
+                            
+                            <h2 id="galleryTitle${i}" onclick="toggleGallery('amisdGallery${i}')">Gallery ${i}</h2>
+                            <div id="youtubeLink${i}"></div> <!-- YouTube link will be inserted here -->
                             <div class="gallery" id="amisdGallery${i}">
                                 <div class="row">
                                     <a href="assets/images/gallery/amisd${i * 4 - 3}.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">

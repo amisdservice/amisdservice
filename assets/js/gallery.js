@@ -1,66 +1,41 @@
-// Map of gallery IDs to their respective names
+// Gallery names mapped to specific dates and YouTube links
 const galleryNames = {
-    gallery3: "Jul102013",
-    gallery4: "Aug152013",
-    gallery5: "Sep202013",
-    gallery6: "Oct052013",
-    gallery7: "Nov122013",
-    gallery8: "Dec252013",
-    gallery9: "Jan152014",
-    gallery10: "Feb202014",
-    gallery11: "Mar152014",
-    gallery12: "Apr182014",
-    gallery13: "May052014",
-    gallery14: "Jun152014",
-    gallery15: "Jul202014",
-    gallery16: "Aug182014",
-    gallery17: "Sep102014",
-    gallery18: "Oct152014",
-    gallery19: "Nov102014",
-    gallery20: "Dec182014"
-  };
-  
-  // Dynamically update gallery titles
-  document.addEventListener('DOMContentLoaded', () => {
-    Object.keys(galleryNames).forEach(galleryId => {
-      const galleryTitle = document.getElementById(`galleryTitle${galleryId.slice(7)}`);
-      if (galleryTitle) {
-        galleryTitle.innerText = galleryNames[galleryId];
-      }
-    });
-  
-    populateGalleries(); // Call the function to populate images
-  });
-  
-  // Populate images in galleries
-  function populateGalleries() {
-    Object.keys(galleryNames).forEach((galleryId, index) => {
-      const galleryContainer = document.getElementById(galleryId);
-      const galleryNumber = index + 3; // Assuming galleries start from 3
-  
-      if (galleryContainer) {
-        for (let imgNum = 1; imgNum <= 8; imgNum++) { // Add 8 images per gallery
-          const anchor = document.createElement('a');
-          anchor.href = `assets/images/gallery/${galleryId}_img${imgNum}.jpg`;
-          anchor.className = "col-md-3 col-sm-4 gallery-item lightbox";
-  
-          const img = document.createElement('img');
-          img.src = `assets/images/gallery/thumb/${galleryId}_img${imgNum}.jpg`;
-          img.alt = `${galleryNames[galleryId]} Image ${imgNum}`;
-  
-          const hoverSpan = document.createElement('span');
-          hoverSpan.className = "on-hover";
-  
-          const captionSpan = document.createElement('span');
-          captionSpan.className = "hover-caption";
-          captionSpan.innerText = `${galleryNames[galleryId]} Image ${imgNum}`;
-  
-          hoverSpan.appendChild(captionSpan);
-          anchor.appendChild(img);
-          anchor.appendChild(hoverSpan);
-          galleryContainer.appendChild(anchor);
+    amisdGallery1: { date: "Jan 01, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_1" },
+    amisdGallery2: { date: "Feb 14, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_2" },
+    amisdGallery3: { date: "Mar 05, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_3" },
+    amisdGallery4: { date: "Apr 10, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_4" },
+    amisdGallery5: { date: "May 15, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_5" },
+    amisdGallery6: { date: "Jun 20, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_6" },
+    amisdGallery7: { date: "Jul 25, 2023", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_7" },
+    amisdGallery8: { date: "Aug 15, 2013", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_8" },
+    amisdGallery9: { date: "Sep 01, 2013", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_9" },
+    amisdGallery10: { date: "Oct 31, 2013", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_10" },
+    amisdGallery11: { date: "Nov 11, 2013", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_11" },
+    amisdGallery12: { date: "Dec 25, 2013", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_12" },
+    amisdGallery13: { date: "Jan 26, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_13" },
+    amisdGallery14: { date: "Feb 14, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_14" },
+    amisdGallery15: { date: "Mar 08, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_15" },
+    amisdGallery16: { date: "Apr 22, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_16" },
+    amisdGallery17: { date: "May 01, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_17" },
+    amisdGallery18: { date: "Jun 15, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_18" },
+    amisdGallery19: { date: "Jul 04, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_19" },
+    amisdGallery20: { date: "Aug 15, 2014", youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_20" },
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    for (let i = 1; i <= 20; i++) {
+        const galleryId = `amisdGallery${i}`;
+        const galleryTitle = document.getElementById(`galleryTitle${i}`);
+        const youtubeLinkContainer = document.getElementById(`youtubeLink${i}`);
+
+        if (galleryTitle && galleryNames[galleryId]) {
+            // Set the date
+            galleryTitle.innerText = galleryNames[galleryId].date;
+
+            // Set the YouTube link
+            if (youtubeLinkContainer) {
+                youtubeLinkContainer.innerHTML = `<a href="${galleryNames[galleryId].youtubeLink}" target="_blank">Watch more photos on YouTube</a>`;
+            }
         }
-      }
-    });
-  }
-  
+    }
+});

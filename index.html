@@ -639,7 +639,7 @@
 </html>
 
 <script>
-   document.querySelector('.fa-whatsapp').parentElement.href = "https://wa.me/+91987654321?text=Hello%20AMISD";
+  document.querySelector('.fa-whatsapp').parentElement.href = "https://wa.me/+91987654321?text=Hello%20AMISD";
   document.querySelector('.fa-facebook').parentElement.href = "https://www.facebook.com/amisdservice";
   document.querySelector('.fa-twitter').parentElement.href = "https://twitter.com/AmisdService";
   document.querySelector('.fa-linkedin').parentElement.href = "https://www.linkedin.com/company/AmisdService";
@@ -654,4 +654,58 @@
 </div> <!-- /.footer-main -->
 </div> <!-- /.footer-top -->
 </footer> <!-- /.main-footer -->
+
+
+<!-- Add the video modal -->
+<div id="videoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <video id="openerVideo" class="video-fluid" controls autoplay muted>
+          <source src="images/opener-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add the video modal -->
+<div id="videoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <video id="openerVideo" class="video-fluid" controls autoplay muted>
+          <source src="video/opener-video.mp4" type="video/mp4"> <!-- MP4 for most browsers -->
+          <source src="video/opener-video.webm" type="video/webm"> <!-- WebM for modern browsers -->
+          <source src="video/opener-video.ogv" type="video/ogg"> <!-- Ogg for older browsers -->
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script to open the video modal on page load -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
+  $(document).ready(function() {
+    $('#videoModal').modal('show');
+  });
+
+  // Stop video when modal is closed
+  $('#videoModal').on('hidden.bs.modal', function () {
+    var video = document.getElementById('openerVideo');
+    video.pause();
+    video.currentTime = 0;
+  });
+</script>

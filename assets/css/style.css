@@ -124,11 +124,11 @@ a:hover, a:focus, a:active {
 ================================= */
 
 .carousel-home {
-  width: 35cm;     /* Ensure the container is full width */
+  width: auto;     /* Ensure the container is full width */
   /*height: auto;    /* Ensure the height adjusts based on the content */
 }
 .carousel-home img {
-  width: 1260px;  
+  width: auto;  
   height: auto; 
   object-fit: cover; /* Ensures the image covers the specified area */
 }

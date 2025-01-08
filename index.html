@@ -82,7 +82,7 @@
 
                   </button>
                   
-                    <a class="navbar-brand" href="index.html"><span style="font-family: 'Adelon Bold'; font-weight: bold; font-size: 1.5em;">AMISD “Always Motivated to Inspire Society Dynamically”</span></a> 
+                    <a class="navbar-brand" href="index.html">AMISD “Always Motivated to Inspire Society Dynamically”</a>
                   
                 </div>
 
@@ -108,21 +108,22 @@
         </nav> 
 
     </header> <!-- /. main-header -->
+
     <div class="page-heading text-center">
 
-      <div class="container zoomIn animated">
-        
-        <h1 class="page-title"><!--ABOUT US --> </span></h1>
-        <p class="page-description">
-          <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit Necessitatibus. -->
-        </p>
-        
+      <div class="page-heading text-center">
+
+        <div class="container zoomIn animated">
+          
+          <h1 class="page-title"><!--A --> </span></h1>
+          <p class="page-description">
+           <!-- L. -->
+          </p>
+          
+        </div>
+    
       </div>
-  
-    </div>
-
-
-
+    
     <!-- Carousel
     ================================================== -->
     <div id="homeCarousel" class="carousel slide carousel-home" data-ride="carousel">
@@ -402,238 +403,239 @@
          </div> <!-- /.our-sponsors -->
         </div>
       </div>
+    </div> <!-- /.row -->
 </div> <!-- /.row -->
 
-<div class="footer-top">
+      <div class="footer-top">
           
-</div>
+      </div>
 
-<div class="footer-main">
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-md-4">
+      <div class="footer-main">
+          <div class="container">
+              
+              <div class="row">
+                  <div class="col-md-4">
 
-                <div class="footer-col">
+                      <div class="footer-col">
 
-                    <h4 class="footer-title">About us <span class="title-under"></span></h4>
+                          <h4 class="footer-title">About us <span class="title-under"></span></h4>
 
-                    <div class="footer-content">
-                        <p>
-                            <strong>Amisd</strong> Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-                        </p> 
+                          <div class="footer-content">
+                              <p>
+                                  <strong>Amisd</strong> Dedicated to empowering lives and fostering hope through compassion, action, and community service.
+                              </p> 
 
-                        <p>
-                            Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-                        </p>
+                              <p>
+                                  Dedicated to empowering lives and fostering hope through compassion, action, and community service.
+                              </p>
 
-                    </div>
-                    
-                </div>
+                          </div>
+                          
+                      </div>
 
-            </div>
+                  </div>
 
-            <div class="col-md-4">
+                  <div class="col-md-4">
 
-                <div class="footer-col">
+                      <div class="footer-col">
 
-                  <h4 class="footer-title">LAST TWEETS <span class="title-under"></span></h4>
+                        <h4 class="footer-title">LAST TWEETS <span class="title-under"></span></h4>
 
-                  <div class="footer-content">
-                      <ul class="tweets list-unstyled">
-                          <li class="tweet"> 
+                        <div class="footer-content">
+                            <ul class="tweets list-unstyled">
+                                <li class="tweet"> 
 
-                              Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-                              <script>
-                                  fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS&tweet.fields=author_id,created_at&expansions=author_id&user.fields=username', {
-                                      headers: {
-                                          'Authorization': 'Bearer YOUR_BEARER_TOKEN'
-                                      }
-                                  })
-                                  .then(response => response.json())
-                                  .then(data => {
-                                      const tweets = data.data;
-                                      const users = data.includes.users;
-                                      let tweetsHtml = '';
-                                      tweets.forEach(tweet => {
-                                          const user = users.find(user => user.id === tweet.author_id);
-                                          tweetsHtml += `<li class="tweet"><strong>${user.username}:</strong> ${tweet.text}</li>`;
-                                      });
-                                      document.querySelector('.tweets').innerHTML = tweetsHtml;
-                                  })
-                                  .catch(error => console.error('Error fetching tweets:', error));
-                              </script>
+                                    Dedicated to empowering lives and fostering hope through compassion, action, and community service.
+                                    <script>
+                                        fetch('https://api.twitter.com/2/tweets?ids=YOUR_TWEET_IDS&tweet.fields=author_id,created_at&expansions=author_id&user.fields=username', {
+                                            headers: {
+                                                'Authorization': 'Bearer YOUR_BEARER_TOKEN'
+                                            }
+                                        })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            const tweets = data.data;
+                                            const users = data.includes.users;
+                                            let tweetsHtml = '';
+                                            tweets.forEach(tweet => {
+                                                const user = users.find(user => user.id === tweet.author_id);
+                                                tweetsHtml += `<li class="tweet"><strong>${user.username}:</strong> ${tweet.text}</li>`;
+                                            });
+                                            document.querySelector('.tweets').innerHTML = tweetsHtml;
+                                        })
+                                        .catch(error => console.error('Error fetching tweets:', error));
+                                    </script>
 
-                          </li>
+                                </li>
 
-                          <li class="tweet"> 
-                              Dedicated to empowering lives and fostering hope through compassion, action, and community service.
+                                <li class="tweet"> 
+                                    Dedicated to empowering lives and fostering hope through compassion, action, and community service.
 
-                            </li>
+                                  </li>
 
-                            <li class="tweet"> 
+                                  <li class="tweet"> 
 
-                              Dedicated to empowering lives and fostering hope through compassion, action, and community service.
+                                    Dedicated to empowering lives and fostering hope through compassion, action, and community service.
 
-                            </li>
+                                  </li>
 
-                        </ul>
-                    </div>
-                    
-                </div>
+                              </ul>
+                          </div>
+                          
+                      </div>
 
-            </div>
+                  </div>
 
-            
-                                
-                            </form>
+                  
+                                      
+                                  </form>
 
-                        </div>
-                    </div>
-                    
-                </div>
+                              </div>
+                          </div>
+                          
+                      </div>
 
-            </div>
-            <div class="clearfix"></div>
+                  </div>
+                  <div class="clearfix"></div>
 
 
-        </div>
-        
-        
-    </div>
+              </div>
+              
+              
+          </div>
 
-    
-</div>
+          
+      </div>
 
-<div class="footer-bottom">
+      <div class="footer-bottom">
 
-    <div class="container text-right">
-        2025 All Rights Reserved By <a href="http://www.ouarmedia.com" target="_blank">AMISD</a>
-    </div>
-</div>
-
-</footer>
+          <div class="container text-right">
+              2025 All Rights Reserved By <a href="http://www.ouarmedia.com" target="_blank">AMISD</a>
+          </div>
+      </div>
+      
+  </footer>
 
 <!-- main-footer -->
 
 
 
 
-<!-- Donate Modal -->
-<div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <!-- Donate Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
 
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="donateModalLabel">DONATE NOW</h4>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="donateModalLabel">DONATE NOW</h4>
+          </div>
+          <div class="modal-body">
+
+                <form class="form-donation">
+
+                        <h3 class="title-style-1 text-center">Thank you for your donation <span class="title-under"></span>  </h3>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12 ">
+                                <input type="text" class="form-control" id="amount" placeholder="AMOUNT(€)">
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="firstName" placeholder="First name*">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="lastName" placeholder="Last name*">
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="email" placeholder="Email*">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" name="phone" placeholder="Phone">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" name="address" placeholder="Address">
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <textarea cols="30" rows="4" class="form-control" name="note" placeholder="Additional note"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right" name="donateNow" >DONATE NOW</button>
+                            </div>
+
+                        </div>
+
+
+
+                       
+                    
+                </form>
+            
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
 
-            <form class="form-donation">
-
-                    <h3 class="title-style-1 text-center">Thank you for your donation <span class="title-under"></span>  </h3>
-
-                    <div class="row">
-
-                        <div class="form-group col-md-12 ">
-                            <input type="text" class="form-control" id="amount" placeholder="AMOUNT(€)">
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="firstName" placeholder="First name*">
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="lastName" placeholder="Last name*">
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="email" placeholder="Email*">
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="phone" placeholder="Phone">
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="form-group col-md-12">
-                            <input type="text" class="form-control" name="address" placeholder="Address">
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-
-                        <div class="form-group col-md-12">
-                            <textarea cols="30" rows="4" class="form-control" name="note" placeholder="Additional note"></textarea>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="form-group col-md-12">
-                            <button type="submit" class="btn btn-primary pull-right" name="donateNow" >DONATE NOW</button>
-                        </div>
-
-                    </div>
-
-
-
-                   
-                
-            </form>
-        
-      </div>
-    </div>
-  </div>
-
-</div> <!-- /.modal -->
+    </div> <!-- /.modal -->
 
 
 
 
 
-<!--  Scripts
-================================================== -->
+    <!--  Scripts
+    ================================================== -->
 
-<!-- jQuery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
 
-<!-- Bootsrap javascript file -->
-<script src="assets/js/bootstrap.min.js"></script>
+    <!-- Bootsrap javascript file -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!-- owl carouseljavascript file -->
+    <script src="assets/js/owl.carousel.min.js"></script>
 
-<!-- owl carouseljavascript file -->
-<script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Template main javascript -->
+    <script src="assets/js/main.js"></script>
 
-<!-- Template main javascript -->
-<script src="assets/js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X');ga('send','pageview');
-</script>
-
-</body>
+    </body>
 </html>
 
 <script>
@@ -652,28 +654,3 @@
 </div> <!-- /.footer-main -->
 </div> <!-- /.footer-top -->
 </footer> <!-- /.main-footer -->
-
-<!-- Video Modal -->
-<div id="videoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <video controls autoplay style="width: 100%;">
-          <source src="images/opener-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  $(document).ready(function() {
-    $('#videoModal').modal('show');
-  });
-</script>

@@ -8,7 +8,7 @@ const galleryNames = {
     amisdGallery2: { 
         date: "Feb 14, 2023", 
         youtubeLink: "https://www.youtube.com/watch?v=VIDEO_ID_2", 
-        description: "Mother Teresa Birthday Celebrations:-On 25/8/13. The organisation celebrated Mother Teresa's Birthday by distributing sarees, fruits, bread blankets etc., at Aruna old age home and Mamatha Orphanage. Volunteers shared their time and happiness with old people and with orphans by providing lunch for that day."
+        description: "Mother Teresa Birthday Celebrations:- On 25/8/13. The organisation celebrated Mother Teresa's Birthday by distributing sarees, fruits, bread blankets etc., at Aruna old age home and Mamatha Orphanage. Volunteers shared their time and happiness with old people and with orphans by providing lunch for that day."
     },
     amisdGallery3: { 
         date: "Mar 05, 2023", 

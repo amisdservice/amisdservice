@@ -122,8 +122,15 @@ a:hover, a:focus, a:active {
 
 /* Home Slider 
 ================================= */
+
+.carousel-home {
+  width: auto;     /* Ensure the container is full width */
+  /*height: auto;    /* Ensure the height adjusts based on the content */
+}
 .carousel-home img {
-  width: 100%;
+  width: auto;  
+  height: auto; 
+  object-fit: cover; /* Ensures the image covers the specified area */
 }
 .carousel-home .carousel-control {
   background: #1f76bd;
@@ -141,7 +148,7 @@ a:hover, a:focus, a:active {
   padding-top: 12px;
 }
 .carousel-home .carousel-control:hover {
-  width: 50px;
+  width: 5px;
 }
 .carousel-home .carousel-caption {
   top: 50%;
@@ -1056,3 +1063,4 @@ form .alert {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
+

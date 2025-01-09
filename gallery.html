@@ -25,6 +25,9 @@
         <!-- Modernizr -->
         <script src="assets/js/modernizr-2.6.2.min.js"></script>
 
+        <!-- gallaries-->
+        <script src="assets/js/gallery.js"></script>
+
     </head>
     <body>
     <!-- NAVBAR
@@ -121,138 +124,67 @@
 			
 		</div>
 
-	</div>
-    <div class="main-container">
-
-        <div class="container gallery fadeIn animated">
-
+	</div><!-- Add this inside your <head> tag or just before closing </body> tag -->
+        <script src="assets/js/scrolling2.js"></script>
+        <div class="latest-updates">
+          <div class="container">
             <div class="row">
-                
-
-                    <a href="assets/images/gallery/amisd1.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd1.jpg" alt="">
-
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd2.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd2.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd3.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd3.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd4.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd4.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd5.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd5.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd6.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd6.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd7.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd7.jpg" alt="">
-
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd8.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd8.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd9.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd9.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd10.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd10.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd11.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd11.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-
-                    <a href="assets/images/gallery/amisd12.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
-
-                        <img src="assets/images/gallery/thumb/amisd12.jpg" alt="">
-                        
-                        <span class="on-hover">
-                            <span class="hover-caption">Image Caption</span>
-                        </span>
-                        
-                    </a> <!-- /.gallery-item -->
-                    
-                
+              <div class="col-md-12">
+                <div class="latest-updates-content">
+                  <!-- Marquee will be injected here -->
+                </div>
+              </div>
             </div>
-            
+          </div>
+</div>
+        
+    
+            <!-- Repeat structure for galleries 1 through 20 -->
+            <!-- Template -->
+             <!-- <h2 onclick="toggleGallery('amisdGallery${i}')">Gallery ${i}</h2> -->
+            <script>
+                for (let i = 1; i <= 20; i++) {
+                    document.write(`
+                        <div class="category">
+                            
+                            <h2 id="galleryTitle${i}" onclick="toggleGallery('amisdGallery${i}')">Gallery ${i}</h2>
+                            <div id="galleryDescription${i}"></div> <!-- Description will be inserted here -->
+                            <div id="youtubeLink${i}"></div> <!-- YouTube link will be inserted here -->
+                            <div class="gallery" id="amisdGallery${i}">
+                                <div class="row">
+                                    <a href="assets/images/gallery/amisd${i * 4 - 3}.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
+                                        <img src="assets/images/gallery/thumb/amisd${i * 4 - 3}.jpg" alt="">
+                                        <span class="on-hover">
+                                            <span class="hover-caption">Image Caption ${i * 4 - 3}</span>
+                                        </span>
+                                    </a>
+                                    <a href="assets/images/gallery/amisd${i * 4 - 2}.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
+                                        <img src="assets/images/gallery/thumb/amisd${i * 4 - 2}.jpg" alt="">
+                                        <span class="on-hover">
+                                            <span class="hover-caption">Image Caption ${i * 4 - 2}</span>
+                                        </span>
+                                    </a>
+                                    <a href="assets/images/gallery/amisd${i * 4 - 1}.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
+                                        <img src="assets/images/gallery/thumb/amisd${i * 4 - 1}.jpg" alt="">
+                                        <span class="on-hover">
+                                            <span class="hover-caption">Image Caption ${i * 4 - 1}</span>
+                                        </span>
+                                    </a>
+                                    <a href="assets/images/gallery/amisd${i * 4}.jpg" class="col-md-3 col-sm-4 gallery-item lightbox">
+                                        <img src="assets/images/gallery/thumb/amisd${i * 4}.jpg" alt="">
+                                        <span class="on-hover">
+                                            <span class="hover-caption">Image Caption ${i * 4}</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
         </div>
+    </div>
+    
 
     </div> <!-- /.main-container  -->
 
@@ -287,57 +219,7 @@
 
                     </div>
 
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">LAST TWEETS <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-                                <ul class="tweets list-unstyled">
-                                    <li class="tweet"> 
-
-                                        Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-
-                                    </li>
-
-                                    <li class="tweet"> 
-
-                                        Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-
-                                    </li>
-
-                                    <li class="tweet"> 
-
-                                        Dedicated to empowering lives and fostering hope through compassion, action, and community service.
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
                     
-                                        
-                                    </form>
-
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-                    <div class="clearfix"></div>
-
-
-                </div>
-                
-                
-            </div>
-
             
         </div>
 
@@ -385,4 +267,14 @@
     document.querySelector('.fa-linkedin').parentElement.href = "https://www.linkedin.com/company/AmisdService";
     document.querySelector('.fa-instagram').parentElement.href = "https://www.instagram.com/amisdservices/";
     document.querySelector('.fa-youtube').parentElement.href = "https://www.youtube.com/AmisdService";
-  </script></script
+  </script></script>
+
+<script>
+    function toggleGallery(categoryId) {
+        const gallery = document.getElementById(categoryId);
+        gallery.style.display = gallery.style.display === 'none' || gallery.style.display === '' ? 'flex' : 'none';
+    }
+</script>
+
+
+
